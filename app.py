@@ -567,7 +567,7 @@ qr_col, info_col = st.columns([1, 2], gap="large")
 
 with qr_col:
     # Default URL — users can override it
-    default_url = "http://localhost:8501"
+    default_url = "https://aiguidedcatalystselection.streamlit.app/"
     qr_url = st.text_input(
         "URL to encode in QR code",
         value=default_url,
