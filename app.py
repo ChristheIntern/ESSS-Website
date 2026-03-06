@@ -566,25 +566,8 @@ st.markdown('<div class="section-title">Scan to View This Page</div>', unsafe_al
 qr_col, info_col = st.columns([1, 2], gap="large")
 
 with qr_col:
-    # Default URL — users can override it
-    default_url = "http://localhost:8501"
-    qr_url = st.text_input(
-        "URL to encode in QR code",
-        value=default_url,
-        help="Enter the URL where this Streamlit app is hosted (e.g. your deployed URL).",
-    )
-    if qr_url:
-        qr_img = make_qr(qr_url, size=220)
-        st.image(qr_img, caption="Scan with your phone camera", width=220)
-
-        # Download button
-        qr_bytes = img_to_bytes(qr_img)
-        st.download_button(
-            label="⬇ Download QR Code",
-            data=qr_bytes,
-            file_name="poster_qr_code.png",
-            mime="image/png",
-        )
+    qr_img = make_qr("https://aiguidedcatalystselection.streamlit.app/", size=220)
+    st.image(qr_img, caption="Scan with your phone camera", width=220)
 
 with info_col:
     st.markdown("""
