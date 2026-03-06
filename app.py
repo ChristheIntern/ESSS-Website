@@ -567,7 +567,7 @@ qr_col, info_col = st.columns([1, 2], gap="large")
 
 with qr_col:
     # Default URL — users can override it
-    default_url = "https://aiguidedcatalystselection.streamlit.app/"
+    default_url = "http://localhost:8501"
     qr_url = st.text_input(
         "URL to encode in QR code",
         value=default_url,
@@ -592,14 +592,7 @@ with info_col:
   <strong style="font-family:'Playfair Display',serif; font-size:1.1rem;">Quick Access via QR Code</strong>
   <p style="margin-top:0.6rem; font-size:0.9rem; color:#6b6560; line-height:1.6;">
     Point your phone camera at the QR code to open this research poster website instantly.
-    Share with conference attendees, peers, or supervisors.<br><br>
-    To generate a scannable QR code, enter the public URL of your deployed Streamlit app
-    in the field on the left (e.g. a <strong>Streamlit Community Cloud</strong> or
-    <strong>Hugging Face Spaces</strong> URL).
-  </p>
-  <hr style="border-color:#d4cfc8; margin:0.8rem 0;">
-  <p style="font-family:'Source Code Pro',monospace; font-size:0.72rem; color:#aaa;">
-    To deploy: streamlit run app.py
+    Share with conference attendees, peers, or supervisors.
   </p>
 </div>
 """, unsafe_allow_html=True)
